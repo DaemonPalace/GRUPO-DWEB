@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurant Contact Page</title>
-    <link rel="stylesheet" href="css/stylesheet.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/stylesheet.css" />
+  </head>
+  <body>
     <div id="cop_background">
+      <form action="LandingPage_POKE.html" class="Contact-form-container">
+        <h2>Contact Us</h2>
 
-        <form action="LandingPage_POKE.html" class="Contact-form-container">
-            <h2>Contact Us</h2>
-        
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-    
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" required>
-    
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-    
-            <label for="subject">Subject:</label>
-            <select id="subject" name="subject" required>
-                <option value="complaint">Complaint</option>
-                <option value="suggestion">Suggestion</option>
-                <option value="inquiry">Inquiry</option>
-            </select>
-    
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" cols="50" required></textarea>
-    
-            <button type="submit" class="Submit-Button">Submit</button>
-        </form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="subject">Subject:</label>
+        <select id="subject" name="subject" required>
+          <option value="complaint">Complaint</option>
+          <option value="suggestion">Suggestion</option>
+          <option value="inquiry">Inquiry</option>
+        </select>
+
+        <label for="message">Message:</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          cols="50"
+          required
+        ></textarea>
+
+        <button type="submit" class="Submit-Button">Submit</button>
+      </form>
     </div>
-</body>
+  </body>
 </html>
