@@ -48,18 +48,45 @@ header {
 
 @keyframes showShoppingCart {
   0% {
+    left: -23%;
   }
   100% {
+    left: 2%;
   }
+}
+
+@keyframes hideShoppingCart {
+  0% {
+    left: -2%;
+  }
+  100% {
+    left: -23%;
+  }
+}
+
+#shopping_cart_container {
+  height: 30vh;
+  width: 50vw;
+  position: fixed;
+  left: -45%;
+}
+
+#shopping_cart_container:hover #shopping_cart {
+  animation: showShoppingCart 0.6s forwards;
+}
+
+#shopping_cart_container:not(:hover) #shopping_cart {
+  animation: hideShoppingCart 0.6s forwards;
 }
 
 #shopping_cart {
   background-color: white;
-  padding: 15px;
-  border-radius: 5px;
-  width: 250px;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  height: fit-content;
+  width: 15rem;
   position: fixed;
-  left: -25%;
+  left: -23%;
   top: 25%;
   box-shadow: 0 2px 0px rgba(0, 0, 0, 0.1);
 }
