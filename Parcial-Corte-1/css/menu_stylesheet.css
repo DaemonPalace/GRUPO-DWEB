@@ -103,7 +103,7 @@ header {
   left: -23%;
   top: 25%;
   box-shadow: 0 2px 0px rgba(0, 0, 0, 0.1);
-  z-index: 2;
+  z-index: 90;
 }
 
 .menu-section {
@@ -142,17 +142,68 @@ header {
   gap: 2rem;
 }
 
-.grid-menu img {
-  scroll-snap-align: center;
+.menu-item-container {
+  flex: 0 0 auto;
+  display: flex;
+  position: relative;
   height: 12rem;
-  width: auto;
+  width: 12rem;
+  scroll-snap-align: center;
+  border-radius: 0.75rem;
+  overflow-y: hidden;
+}
+
+.grid-menu img {
+  height: 100%;
+  width: 100%;
   border-radius: 0.7rem;
 }
 
-.grid-menu img:hover {
-  scale: 1.1;
-  transform: translateY(10px);
+.glassmorph-overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 0.75rem;
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  bottom: -40%;
+  backdrop-filter: blur(15px);
+}
+
+.glassmorph-overlay p {
+  color: beige;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+@keyframes showGlassmorphOverlay {
+  from {
+    bottom: -40%;
+  }
+  to {
+    bottom: 0%;
+  }
+}
+
+@keyframes hideGlassmorphOverlay {
+  from {
+    bottom: 0%;
+  }
+  to {
+    bottom: -40%;
+  }
+}
+
+.grid-menu .menu-item-container:hover {
+  transform: translateY(10px) scale(1.1);
   box-shadow: 2px 2px 8px 0px #555;
+}
+
+.grid-menu .menu-item-container:hover .glassmorph-overlay {
+  animation: showGlassmorphOverlay 0.3s forwards;
+}
+
+.grid-menu .menu-item-container:not(:hover) .glassmorph-overlay {
+  animation: hideGlassmorphOverlay 0.2s forwards;
 }
 
 .grid-menu::-webkit-scrollbar {
