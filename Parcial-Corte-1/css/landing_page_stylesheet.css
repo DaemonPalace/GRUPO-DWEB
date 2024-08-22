@@ -21,61 +21,83 @@ html {
 }
 
 header {
-  height: 7vh;
-  padding: 20px;
+  animation-duration: 3s;
+  animation-name: slidein;
+  padding: 0.25rem 1rem;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  position: relative;
-  margin: 0rem 0rem;
+  align-items: center;
+  margin: 0 0.125rem;
   background-color:transparent;
-  content: center;
 }
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
 .logo-container{
   flex: 1;
-  margin: 10px;
 }
 .header-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  position: absolute;
-  top: 35%;
-  right: 1%;
+  justify-content: center;
 }
-.nav ul{
+.main-nav ul{
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2.0rem;
   margin: 0 1.5rem;
 }
-.nav ul li a {
+.main-nav ul li a {
   text-decoration: none;
   color: #333;
   font-weight: 400;
+}
+.main-nav ul li a:hover {
+  color: #FFD700; /* Cambia a un color dorado al pasar el cursor */
+}
+.order-button{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+.order-button img{
+  margin-right: 160px;
 }
 .order-button button{
   background-color: #FF0000;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 20px 20px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+  border-radius: 5px;
   display: flex;
   align-items: center;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
 }
-.order-button button::before {
-  content: url('images/Bolsa de compras.png'); /* Ruta a tu ícono */
-  margin-right: 10px;
+.order-button button:hover {
+  background-color:  #FFD700; /* Cambia a un color naranja fuerte al pasar el cursor */
 }
-
 header button {
   height: 2rem;
   border: none;
   background: none;
   position: absolute;
-  right: 1%;
+  right: 2%;
 }
 
 #lp_background {
