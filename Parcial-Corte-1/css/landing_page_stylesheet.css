@@ -22,11 +22,52 @@ html {
 
 header {
   height: 7vh;
+  padding: 20px;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: space-between;
+  align-items: baseline;
   position: relative;
-  background-color: white;
+  margin: 0rem 0rem;
+  background-color:transparent;
+  content: center;
+}
+.logo-container{
+  flex: 1;
+  margin: 10px;
+}
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  top: 35%;
+  right: 1%;
+}
+.nav ul{
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0 1.5rem;
+}
+.nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 400;
+}
+.order-button button{
+  background-color: #FF0000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.order-button button::before {
+  content: url('images/Bolsa de compras.png'); /* Ruta a tu ícono */
+  margin-right: 10px;
 }
 
 header button {
