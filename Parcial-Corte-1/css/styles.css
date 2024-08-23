@@ -1,0 +1,120 @@
+@font-face {
+    font-family: Raleway;
+    src: url(fonts/Raleway/Raleway-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Italic_Raleway;
+    src: url(fonts/Raleway/Raleway-Italic-VariableFont_wght.ttf);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 16px;
+    overflow-x: hidden;
+    font-family: Raleway, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.payment-terminal {
+    max-width: 400px;
+    margin: 5% auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.payment-terminal h2 {
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 0.15rem;
+    margin-bottom: 20px;
+    font-family: Italic_Raleway, sans-serif;
+    color: #333;
+}
+
+.payment-terminal label {
+    font-size: 1rem;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.payment-terminal input[type="text"],
+.payment-terminal select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-family: Raleway, sans-serif;
+    box-sizing: border-box;
+}
+
+.payment-terminal input:focus,
+.payment-terminal select:focus {
+    outline: none;
+    border-color: #999;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.payment-terminal select {
+    appearance: none;
+    background-color: #fff;
+    color: #333;
+}
+
+.submit-button {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+    border: 3px solid rgb(70, 130, 252); 
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+    margin-top: 20px;
+}
+
+.submit-button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(70, 130, 252); 
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+}
+
+.submit-button:hover::before {
+    transform: translateX(0);
+}
+
+.card-details,
+.change-transaction {
+    display: none;
+}
+
+.payment-method select {
+    margin-bottom: 20px;
+}
+
+.payment-terminal .card-details input,
+.payment-terminal .change-transaction input {
+    margin-bottom: 10px;
+}

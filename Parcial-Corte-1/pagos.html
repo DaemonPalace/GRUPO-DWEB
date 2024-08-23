@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Payment Terminal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="javascript/payment.js"></script>
+</head>
+<body>
+    <div class="payment-terminal">
+        <h2>Simple Payment Terminal</h2>
+        <div class="payment-method">
+            <label for="payment-method-select">Select Payment Method</label>
+            <select id="payment-method-select">
+                <option value="">-- Choose Method --</option>
+                <option value="card">Card (MasterCard/Visa)</option>
+                <option value="change">efectivo</option>
+                <option value="transaction">Transaction</option>
+            </select>
+        </div>
+
+        <div class="card-details">
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" placeholder="Enter card number">
+            <label for="expiry-date">Expiry Date</label>
+            <input type="text" id="expiry-date" placeholder="MM/YY">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" placeholder="Enter CVV">
+        </div>
+
+        <div class="change-transaction">
+            <label for="amount">Amount</label>
+            <input type="text" id="amount" placeholder="Enter amount">
+        </div>
+
+        <button class="submit-button">Submit Payment</button>
+    </div>
+
+    
+</body>
+</html>
