@@ -14,87 +14,70 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-size: 16px;
+  font-size: 1rem; /* Equivalent to 16px by default */
   overflow-x: hidden;
   font-family: Raleway, sans-serif;
   background-color: beige;
 }
 
 header {
-  height: 7vh;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  position: relative;
-  background-color: white;
-}
-
-header {
+  height: 2vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
   background-color: white;
-  color: white;
   position: relative;
   z-index: 10;
 }
 
-/* Overlay Styles */
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
-  z-index: 4; /* Should be below the menu but above other content */
-  opacity: 0; /* Initially hidden */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 4;
+  opacity: 0;
   transition: opacity 0.3s ease;
-  pointer-events: none; /* Prevent clicks on the overlay */
+  pointer-events: none;
 }
 
-/* Overlay Show Class */
 .overlay.show {
-  opacity: 1; /* Show the overlay when the menu is open */
-  pointer-events: auto; /* Allow interaction with the overlay */
+  opacity: 1;
+  pointer-events: auto;
 }
 
-/* Hamburger Styles */
 .hamburger {
   cursor: pointer;
   z-index: 15;
-  position: fixed; /* Keep the hamburger in view while scrolling */
-  top: 10px; /* Adjust position */
-  right: 10px; /* Move hamburger to the right */
+  position: fixed;
+  right: 1vw; /* Replaced 0.5rem with vw */
 }
 
-/* Hamburger SVG Transition */
 .hamburger svg {
   transition: transform 0.3s ease;
 }
 
-/* Side Menu Styles */
 .side-menu {
   position: fixed;
   top: 0;
-  right: -250px; /* Hide the menu by default, move it to the right */
-  width: 250px;
+  right: -25vw; /* Replaced 250px with vw */
   height: 100%;
-  background-color: rgba(237, 234, 234, 0.8); /* Gray with 80% opacity */
-  padding-top: 60px;
+  background-color: rgba(237, 234, 234, 0.8);
+  padding-top: 6vh; /* Replaced 60px with vh */
   transition: right 0.3s ease;
   z-index: 5;
 }
 
-/* Side Menu Items */
 .side-menu ul {
   list-style-type: none;
   padding: 0;
 }
 
 .side-menu ul li {
-  padding: 15px 25px;
+  padding: 1.5vh 2.5vw; /* Replaced 15px 25px with vh and vw */
 }
 
 .side-menu ul li a {
@@ -103,14 +86,12 @@ header {
   display: block;
 }
 
-/* Side Menu Open Class */
 .side-menu.open {
-  right: 0; /* Show the menu when open */
+  right: 0;
 }
 
-/* Hamburger Open Animation */
 .hamburger.open svg {
-  transform: rotate(-90deg); /* Rotate the hamburger icon */
+  transform: rotate(-90deg);
 }
 
 #lp_background {
@@ -128,7 +109,7 @@ header {
 
 #lp_background h1 {
   color: transparent;
-  font-size: 25rem;
+  font-size: 25vw; /* Replaced 25rem with vw */
   font-weight: 700;
   background-image: url(/images/text2.jpg);
   background-size: cover;
@@ -145,7 +126,7 @@ header {
 .container h2 {
   display: flex;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 2rem; /* Keep font size in rem */
   letter-spacing: 0.25rem;
 }
 
@@ -155,31 +136,31 @@ header {
   display: flex;
   flex-direction: row;
   height: 80vh;
-  padding: 0.1rem;
+  padding: 0.5vw; /* Replaced 0.1rem with vw */
 }
 
 .menu_button_background {
   display: flex;
   align-items: flex-end;
-  border-radius: 0.5rem;
+  border-radius: 1vw; /* Replaced 0.5rem with vw */
   height: 75vh;
   width: 27vw;
   background-size: cover;
   background-position: center;
   overflow: hidden;
   position: relative;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2),
-    -2px -2px 8px rgba(255, 255, 255, 0.2);
+  box-shadow: 0.2vw 0.2vw 0.8vw rgba(0, 0, 0, 0.2),
+    -0.2vw -0.2vw 0.8vw rgba(255, 255, 255, 0.2); /* Replaced px with vw */
 }
 
 @keyframes scaleAndShadow {
   0% {
     scale: 1;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0.2vw 0.2vw 0.8vw rgba(0, 0, 0, 0.3);
   }
   100% {
     scale: 1.1;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+    box-shadow: 0.3vw 0.3vw 0.8vw rgba(0, 0, 0, 0.6);
   }
 }
 
@@ -208,12 +189,12 @@ header {
     rgba(255, 255, 255, 0.4),
     rgba(255, 255, 255, 0.8)
   );
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(0.5rem);
   justify-content: center;
   align-items: center;
   color: beige;
-  font-size: 4rem;
+  font-size: 4rem; /* Keep font size in rem */
   overflow: hidden;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
@@ -248,13 +229,13 @@ header {
 .column {
   display: flex;
   flex-direction: column;
-  align-items: first baseline;
+  align-items: flex-start;
   flex-grow: 1;
   flex-basis: 0;
 }
 
 #logo {
-  margin: 0 2rem;
+  margin: 0 2vw; /* Replaced 2rem with vw */
 }
 
 #text-column p {
@@ -271,12 +252,12 @@ header {
 
 footer {
   background-color: whitesmoke;
-  height: 20%;
+  height: 20vh;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0.5rem 1rem;
-  gap: 2rem;
+  padding: 1vw; /* Replaced 0.5rem 1rem with vw */
+  gap: 2vw; /* Replaced 2rem with vw */
 }
 
 .column ul {
@@ -287,4 +268,11 @@ li {
   color: gray;
   font-family: Italic_Raleway, sans-serif;
   font-style: italic;
+}
+
+.menu_button_background {
+  max-width: 40vw;
+  min-width: 20vw;
+  max-height: 90vh;
+  min-height: 60vh;
 }
