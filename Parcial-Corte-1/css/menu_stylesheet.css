@@ -76,7 +76,6 @@ header {
   position: fixed;
   left: -45%;
   top: 37.5%;
-  z-index: 9999;
 }
 
 #shopping_cart_container img {
