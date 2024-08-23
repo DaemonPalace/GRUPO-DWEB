@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartList = document.getElementById("cart_items");
   const totalAmount = document.getElementById("total_amount");
 
+  // Function to add an item to the cart
   function addToCart(name, price) {
     console.log(`Adding item to cart: ${name} at $${price}`);
     const item = {
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCart();
   }
 
+  // Function to update the cart display
   function updateCart() {
     console.log('Updating cart');
     cartList.innerHTML = "";
@@ -37,26 +39,32 @@ document.addEventListener("DOMContentLoaded", () => {
     totalAmount.textContent = `$${total.toFixed(2)}`;
   }
 
-  // Initial cart update
-  updateCart();
-
-  // Ensure that event listeners are being attached
-  const menuImages = document.querySelectorAll(".menu-image");
-  console.log(`Found ${menuImages.length} menu images`);
-
-  menuImages.forEach((image) => {
-    image.addEventListener("click", function () {
-      const name = this.getAttribute("data-name");
-      const price = this.getAttribute("data-price");
-      console.log(`Image clicked: ${name} at $${price}`);
+  // Handle item click to add to cart
+  function handleItemClick(event) {
+    const target = event.target.closest('.menu-item-container img');
+    if (target) {
+      const name = target.getAttribute('data-name');
+      const price = parseFloat(target.getAttribute('data-price'));
       if (name && price) {
         addToCart(name, price);
       } else {
         console.error('Image missing data-name or data-price attributes');
       }
-    });
+    }
+  }
+
+  // Initial cart update
+  updateCart();
+
+  // Ensure that event listeners are being attached
+  const menuImages = document.querySelectorAll(".menu-item-container img");
+  console.log(`Found ${menuImages.length} menu images`);
+
+  menuImages.forEach((image) => {
+    image.addEventListener("click", handleItemClick);
   });
 
+  // Checkout button event listener
   document.getElementById("checkout_button").addEventListener("click", () => {
     console.log('Proceed to checkout');
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
