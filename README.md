@@ -38,6 +38,9 @@ Este proyecto consiste en el desarrollo de una página web [describe el propósi
 
 ## Estructura del Proyecto
 
+
+```bash
+
 .
 ├── Landing_Page.html           # Página principal del menú
 ├── pagos.html                  # Página de checkout
