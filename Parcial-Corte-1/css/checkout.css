@@ -1,0 +1,164 @@
+@font-face {
+    font-family: Raleway;
+    src: url(Raleway-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Italic_Raleway;
+    src: url(Raleway-Italic-VariableFont_wght.ttf);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 16px;
+    overflow-x: hidden;
+    font-family: Raleway, sans-serif;
+    background-color: #f9f9f9;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ffffff;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cart_summary {
+    width: 100%;
+    max-width: 800px;
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+#cart_summary h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+#cart_items_summary {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cart_items_summary li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cart_items_summary .quantity {
+    width: 60px;
+    padding: 0.2rem;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#cart_items_summary .remove {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+#cart_items_summary .remove:hover {
+    background-color: #c0392b;
+}
+
+#total_amount_summary {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#payment_section {
+    width: 100%;
+    max-width: 800px;
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#payment_section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+#payment_form {
+    display: flex;
+    flex-direction: column;
+}
+
+#payment_form label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+#payment_form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+#payment_form input:focus {
+    outline: none;
+    border-color: #999;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#payment_form button {
+    padding: 0.9rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#payment_form button:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    background-color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}

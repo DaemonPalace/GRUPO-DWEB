@@ -12,7 +12,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-size: 16px;
+    font-size: 1rem; /* Base font size is 16px by default */
     overflow-x: hidden;
     font-family: Raleway, sans-serif;
 }
@@ -36,25 +36,25 @@ header {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
-    z-index: 4; /* Should be below the menu but above other content */
-    opacity: 0; /* Initially hidden */
+    z-index: 4;
+    opacity: 0;
     transition: opacity 0.3s ease;
-    pointer-events: none; /* Prevent clicks on the overlay */
+    pointer-events: none; 
 }
 
 /* Overlay Show Class */
 .overlay.show {
-    opacity: 1; /* Show the overlay when the menu is open */
-    pointer-events: auto; /* Allow interaction with the overlay */
+    opacity: 1;
+    pointer-events: auto;
 }
 
 /* Hamburger Styles */
 .hamburger {
     cursor: pointer;
     z-index: 15;
-    position: fixed; /* Keep the hamburger in view while scrolling */
-    top: 10px; /* Adjust position */
-    right: 10px; /* Move hamburger to the right */
+    position: fixed;
+    top: 1rem; /* Adjust position */
+    right: 1rem; /* Move hamburger to the right */
 }
 
 /* Hamburger SVG Transition */
@@ -66,11 +66,11 @@ header {
 .side-menu {
     position: fixed;
     top: 0;
-    right: -250px; /* Hide the menu by default, move it to the right */
-    width: 250px;
+    right: -20rem; /* Hide the menu by default */
+    width: 20rem;
     height: 100%;
     background-color: rgba(237, 234, 234, 0.8); /* Gray with 80% opacity */
-    padding-top: 60px;
+    padding-top: 4rem;
     transition: right 0.3s ease;
     z-index: 5;
 }
@@ -82,7 +82,7 @@ header {
 }
 
 .side-menu ul li {
-    padding: 15px 25px;
+    padding: 1rem 1.5rem;
 }
 
 .side-menu ul li a {
@@ -101,10 +101,7 @@ header {
     transform: rotate(-90deg); /* Rotate the hamburger icon */
 }
 
-
-
-
-
+/* Background Image */
 #cop_background {
     background-image: url(/images/3bowls.webp);
     background-size: cover;
@@ -116,26 +113,26 @@ header {
     align-items: center;
     text-align: center;
     overflow: hidden;
-
 }
 
+/* Contact Form Styles */
 .Contact-form-container {
-    max-width: 600px;
+    max-width: 37.5rem; /* 600px equivalent */
     margin: 5% auto;
-    padding: 20px;
+    padding: 1.25rem; /* 20px equivalent */
     background-color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1); /* 4px 10px equivalent */
+    border-radius: 0.625rem; /* 10px equivalent */
     display: flex;
-    flex-direction: column; /* Align items vertically */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column;
+    align-items: center;
 }
 
 .Contact-form-container h2 {
     text-align: center;
     font-size: 2rem;
     letter-spacing: 0.15rem;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem; /* 20px equivalent */
     font-family: Italic_Raleway, sans-serif;
     color: #333;
 }
@@ -144,7 +141,7 @@ header {
     font-size: 1rem;
     color: #555;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem; /* 5px equivalent */
 }
 
 input[type="text"],
@@ -165,10 +162,10 @@ textarea {
 .Contact-form-container input,
 .Contact-form-container textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
+    padding: 0.625rem; /* 10px equivalent */
+    margin-bottom: 1.25rem; /* 20px equivalent */
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 0.3125rem; /* 5px equivalent */
     font-size: 1rem;
     font-family: Raleway, sans-serif;
     box-sizing: border-box;
@@ -178,7 +175,7 @@ textarea {
 .Contact-form-container textarea:focus {
     outline: none;
     border-color: #999;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.3125rem 0.3125rem rgba(0, 0, 0, 0.1); /* 5px 5px equivalent */
 }
 
 select {
@@ -187,13 +184,14 @@ select {
     color: #333;
 }
 
+/* Submit Button Styles */
 .Submit-Button {
     display: inline-block;
     padding: 0.9rem 1.8rem;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
     color: black;
-    border: 3px solid rgb(70, 130, 252); 
+    border: 0.1875rem solid rgb(70, 130, 252); /* 3px equivalent */
     cursor: pointer;
     position: relative;
     background-color: transparent;
@@ -201,7 +199,7 @@ select {
     overflow: hidden;
     z-index: 1;
     font-family: inherit;
-    margin-top: 20px; /* Space above the button */
+    margin-top: 1.25rem; /* 20px equivalent */
 }
 
 .Submit-Button::before {
@@ -213,7 +211,7 @@ select {
     height: 100%;
     background-color: rgb(70, 130, 252); 
     transform: translateX(-100%);
-    transition: all .3s;
+    transition: all 0.3s;
     z-index: -1;
 }
 
