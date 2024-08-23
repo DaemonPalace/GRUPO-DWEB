@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Payment Terminal</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="javascript/payment.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="css/checkout.css"> <!-- Link to your CSS file -->
+  <script defer src="javascript/checkout.js"></script> <!-- Link to your JavaScript file -->
 </head>
 <body>
-    <div class="payment-terminal">
-        <h2>Payment Terminal</h2>
-        <div class="payment-method">
-            <label for="payment-method-select">Select Payment Method</label>
-            <select id="payment-method-select">
-                <option value="">-- Choose Method --</option>
-                <option value="card">Card (MasterCard/Visa)</option>
-                <option value="change">efectivo</option>
-                <option value="transaction">Transaction</option>
-            </select>
-        </div>
+  <header>
+    <h1>Checkout</h1>
+  </header>
+  
+  <main>
+    <section id="cart_summary">
+      <h2>Your Cart</h2>
+      <ul id="cart_items_summary">
+        <!-- Cart items will be dynamically inserted here -->
+      </ul>
+      <p>Total Amount: <span id="total_amount_summary">$0.00</span></p>
+    </section>
 
-        <div class="card-details">
-            <label for="card-number">Card Number</label>
-            <input type="text" id="card-number" placeholder="Enter card number">
-            <label for="expiry-date">Expiry Date</label>
-            <input type="text" id="expiry-date" placeholder="MM/YY">
-            <label for="cvv">CVV</label>
-            <input type="text" id="cvv" placeholder="Enter CVV">
-        </div>
+    <section id="payment_section">
+      <h2>Payment</h2>
+      <form id="payment_form">
+        <label for="card_number">Card Number</label>
+        <input type="text" id="card_number" name="card_number" required>
+        
+        <label for="expiry_date">Expiry Date</label>
+        <input type="text" id="expiry_date" name="expiry_date" required>
+        
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" name="cvv" required>
+        
+        <button type="submit">Pay Now</button>
+      </form>
+    </section>
+  </main>
 
-        <div class="change-transaction">
-            <label for="amount">Amount</label>
-            <input type="text" id="amount" placeholder="Enter amount">
-        </div>
-
-        <button class="submit-button">Submit Payment</button>
-    </div>
-
-    
+  <footer>
+    <p>&copy; :)</p>
+  </footer>
 </body>
 </html>
