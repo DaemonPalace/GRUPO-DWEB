@@ -50,11 +50,11 @@ function displayCocktail(cocktail) {
     }
   }
 
-  itemDisplay.style.display = 'block';
+  itemDisplay.style.display = 'flex';
 }
 
 function showLoader(show) {
-  loader.style.display = show ? 'block' : 'none';
+  loader.style.display = show ? 'flex' : 'none';
 }
 
 addToFavoritesButton.addEventListener('click', addToFavorites);
