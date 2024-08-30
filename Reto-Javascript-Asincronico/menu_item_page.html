@@ -1,10 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
-    <title>__ Menu Item Page</title>
+    <title>Menu Item Page - API Challenge</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/menu_item_page_stylesheet.css" />
     <script src="javascript/menu_item_page_script.js" defer></script>
   </head>
+  <body>
+
+    <header>
+      <h1>Explora Cocteles</h1>
+      <button id="search-random-item">Buscar Coctel Aleatorio</button>
+    </header>
+
+
+    <div id="loader" style="display: none;">Cargando...</div>
+
+    <section id="item-display">
+      <h2 id="item-name">Nombre del Coctel</h2>
+      <p><strong>ID:</strong> <span id="item-id"></span></p>
+      <p><strong>Categoría:</strong> <span id="item-category"></span></p>
+      <p><strong>Ingredientes:</strong></p>
+      <ul id="item-ingredients"></ul>
+      <p><strong>Instrucciones:</strong></p>
+      <p id="item-instructions"></p>
+      <img id="item-image" src="" alt="Imagen del coctel" />
+      <button id="add-to-favorites">Agregar a Favoritos</button>
+    </section>
+
+    <section id="favorites-section">
+      <h2>Favoritos</h2>
+      <ul id="favorites-list"></ul>
+    </section>
+  </body>
 </html>
