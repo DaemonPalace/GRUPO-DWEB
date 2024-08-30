@@ -5,3 +5,7 @@ document.querySelector(".hamburger").addEventListener("click", function () {
   sideMenu.classList.toggle("open");
   overlay.classList.toggle("show");
 });
+
+function redirectTo(page) {
+  window.location.href = page;
+}
