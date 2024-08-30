@@ -3,10 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
   containers.forEach((container) => {
     const image = container.querySelector(".menu-image");
     const altText = image.getAttribute("alt");
-    const productPrice = image.getAttribute("data-price");
 
     const overlayText = container.querySelector(".overlay-text");
-    overlayText.textContent = altText + " " + productPrice;
+    overlayText.textContent = altText;
 
     const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
     const cartList = document.getElementById("cart_items");
