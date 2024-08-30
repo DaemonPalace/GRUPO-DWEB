@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 @font-face {
   font-family: Prata;
   src: url(/fonts/Prata-Regular.ttf);
@@ -83,4 +81,41 @@ header button img {
   text-align: center;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
->>>>>>> Stashed changes
+
+#favorites-section {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.25rem;
+  width: 58.75rem;
+  margin: 1.25rem auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#favorites-section h2 {
+  color: #333;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#favorites-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#favorites-list li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+#favorites-list li:hover {
+  background-color: #f0f0f0;
+}

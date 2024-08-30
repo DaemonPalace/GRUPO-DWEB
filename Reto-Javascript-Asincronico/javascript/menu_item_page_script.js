@@ -1,7 +1,4 @@
-<<<<<<< Updated upstream
-=======
 const cocktailAPIUrl = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
-
 const searchButton = document.getElementById("search-random-item");
 const loader = document.getElementById("loader");
 const itemDisplay = document.getElementById("item-display");
@@ -110,4 +107,3 @@ async function fetchFavoriteCocktail(cocktailId) {
 }
 
 document.addEventListener("DOMContentLoaded", updateFavoritesList);
->>>>>>> Stashed changes
