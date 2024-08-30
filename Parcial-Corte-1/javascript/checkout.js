@@ -15,7 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const li = document.createElement("li");
       li.innerHTML = `
         ${item.name} - $${item.price.toFixed(2)} x 
-        <input type="number" class="quantity" data-index="${index}" value="${item.quantity}" min="1">
+        <input type="number" class="quantity" data-index="${index}" value="${
+        item.quantity
+      }" min="1">
         <button class="remove" data-index="${index}">Remove</button>
       `;
       cartList.appendChild(li);
@@ -52,16 +54,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Event listener for the payment form submission
-  document.getElementById("payment_form").addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    // Add your payment processing logic here
-
-    // Clear the cart data from localStorage
-    localStorage.removeItem("cartItems");
-
-    // Redirect or show a confirmation message
-    alert("Payment processed successfully!");
-    window.location.href = "Menu_POKE.html"; // Redirect to a confirmation page or home page
-  });
+  document
+    .getElementById("payment_form")
+    .addEventListener("submit", (event) => {
+      // event.preventDefault();
+      // // Add your payment processing logic here
+      // // Clear the cart data from localStorage
+      // localStorage.removeItem("cartItems");
+      // // Redirect or show a confirmation message
+      // alert("Payment processed successfully!");
+      // window.location.href = "Menu_POKE.html"; // Redirect to a confirmation page or home page
+    });
 });

@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const cartList = document.getElementById("cart_items");
     const totalAmount = document.getElementById("total_amount");
 
-    // Function to add an item to the cart
     function addToCart(name, price) {
       console.log(`Adding item to cart: ${name} at $${price}`);
       const item = {
