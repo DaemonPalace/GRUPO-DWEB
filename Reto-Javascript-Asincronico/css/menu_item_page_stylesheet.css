@@ -14,7 +14,7 @@ body {
   margin: 0;
   align-items: center;
   background-color: cornsilk;
-  gap: 1rem;
+  gap:rem;
   animation: backgroundAnimation 10s infinite alternate;
 }
 
@@ -26,7 +26,7 @@ body {
     background-color: rgb(20, 12, 78);
   }
   100% {
-    background-color: papayawhip;
+    background-color: rgb(213, 205, 191);
   }
 }
 
@@ -35,7 +35,7 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 2rem 1rem;
   background-image: url(/images/cocktail-party.webp);
   background-size: cover;
   background-repeat: no-repeat;

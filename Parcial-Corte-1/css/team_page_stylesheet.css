@@ -1,11 +1,11 @@
 @font-face {
     font-family: Raleway;
-    src: url(fonts/Raleway/Raleway/Raleway-VariableFont_wght.ttf);
+    src: url(Raleway/Raleway-VariableFont_wght.ttf);
 }
 
 @font-face {
     font-family: Italic_Raleway;
-    src: url(fonts/Raleway/Raleway-Italic-VariableFont_wght.ttf);
+    src: url(Raleway-Italic-VariableFont_wght.ttf);
 }
 
 body, html {

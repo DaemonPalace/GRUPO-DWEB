@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,4 +43,48 @@
     <p>&copy; :)</p>
   </footer>
 </body>
+=======
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="css/checkout_page_stylesheet.css" />
+    <!-- Link to your CSS file -->
+    <script defer src="javascript/checkout.js"></script>
+    <!-- Link to your JavaScript file -->
+  </head>
+  <body>
+    <header>
+      <h1>Checkout</h1>
+    </header>
+
+    <main>
+      <section id="cart_summary">
+        <h2>Your Cart</h2>
+        <ul id="cart_items_summary"></ul>
+        <p>Total Amount: <span id="total_amount_summary">$0.00</span></p>
+      </section>
+
+      <section id="payment_section">
+        <h2>Payment</h2>
+        <form id="payment_form" method="get" action="LandingPage_POKE.html">
+          <label for="card_number">Card Number</label>
+          <input type="text" id="card_number" name="card_number" required />
+
+          <label for="expiry_date">Expiry Date</label>
+          <input type="text" id="expiry_date" name="expiry_date" required />
+
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" name="cvv" required />
+
+          <button type="submit">Pay Now</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy;</p>
+    </footer>
+  </body>
+>>>>>>> 58fc11fc13de8bd04dfe174d6ac6a8d66b94f550
 </html>

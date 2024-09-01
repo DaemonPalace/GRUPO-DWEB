@@ -13,7 +13,7 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-size: 1rem;
+  font-size: 1rem; /* Base font size is 16px by default */
   overflow-x: hidden;
   font-family: Raleway, sans-serif;
 }
@@ -22,36 +22,38 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2vw;
+  padding: 1rem;
   background-color: white;
   color: white;
   position: relative;
   z-index: 10;
 }
 
+/* Overlay Styles */
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
   z-index: 4;
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
 }
 
+/* Overlay Show Class */
 .overlay.show {
   opacity: 1;
   pointer-events: auto;
 }
 
 .hamburger {
-  position: absolute;
   cursor: pointer;
   z-index: 15;
-  right: 1vw;
+  position: absolute;
+  right: 1rem;
 }
 
 .hamburger svg {
@@ -61,11 +63,11 @@ header {
 .side-menu {
   position: fixed;
   top: 0;
-  right: -20vw;
-  width: 20vw;
+  right: -20rem;
+  width: 20rem;
   height: 100%;
   background-color: rgba(237, 234, 234, 0.8);
-  padding-top: 10vh;
+  padding-top: 4rem;
   transition: right 0.3s ease;
   z-index: 5;
 }
@@ -76,7 +78,7 @@ header {
 }
 
 .side-menu ul li {
-  padding: 3vh 5vw;
+  padding: 1rem 1.5rem;
 }
 
 .side-menu ul li a {
@@ -107,13 +109,12 @@ header {
 }
 
 .Contact-form-container {
-  max-width: 100%;
-  width: 90vw;
+  max-width: 37.5rem;
   margin: 5% auto;
-  padding: 5vw;
+  padding: 1.25rem;
   background-color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 2vw;
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.625rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -123,7 +124,7 @@ header {
   text-align: center;
   font-size: 2rem;
   letter-spacing: 0.15rem;
-  margin-bottom: 5vh;
+  margin-bottom: 1.25rem;
   font-family: Italic_Raleway, sans-serif;
   color: #333;
 }
@@ -132,7 +133,7 @@ header {
   font-size: 1rem;
   color: #555;
   display: block;
-  margin-bottom: 1vh;
+  margin-bottom: 0.3125rem;
 }
 
 input[type="text"],
@@ -141,9 +142,9 @@ input[type="email"],
 select,
 textarea {
   width: 100%;
-  padding: 1vh;
-  margin-bottom: 2vh;
-  border-radius: 0.5vw;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
   border: 1px solid #ccc;
   font-size: 1rem;
   font-family: Raleway, sans-serif;
@@ -153,10 +154,10 @@ textarea {
 .Contact-form-container input,
 .Contact-form-container textarea {
   width: 100%;
-  padding: 2vh;
-  margin-bottom: 5vh;
+  padding: 0.625rem;
+  margin-bottom: 1.25rem;
   border: 1px solid #ddd;
-  border-radius: 1vw;
+  border-radius: 0.3125rem;
   font-size: 1rem;
   font-family: Raleway, sans-serif;
   box-sizing: border-box;
@@ -166,7 +167,7 @@ textarea {
 .Contact-form-container textarea:focus {
   outline: none;
   border-color: #999;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.3125rem 0.3125rem rgba(0, 0, 0, 0.1);
 }
 
 select {
@@ -175,13 +176,14 @@ select {
   color: #333;
 }
 
+/* Submit Button Styles */
 .Submit-Button {
   display: inline-block;
-  padding: 2vh 5vw;
+  padding: 0.9rem 1.8rem;
   font-size: 1rem;
   font-weight: 700;
   color: black;
-  border: 0.3rem solid rgb(70, 130, 252);
+  border: 0.1875rem solid rgb(70, 130, 252); /* 3px equivalent */
   cursor: pointer;
   position: relative;
   background-color: transparent;
@@ -189,7 +191,7 @@ select {
   overflow: hidden;
   z-index: 1;
   font-family: inherit;
-  margin-top: 2vh;
+  margin-top: 1.25rem; /* 20px equivalent */
 }
 
 .Submit-Button::before {
