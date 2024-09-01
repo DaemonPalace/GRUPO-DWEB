@@ -1,0 +1,227 @@
+@font-face {
+  font-family: Prata;
+  src: url(/fonts/Prata-Regular.ttf);
+}
+
+:root {
+  font-size: 16px;
+  font-family: Prata, serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  align-items: center;
+  background-color: cornsilk;
+  gap: 1rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 2rem;
+  background-image: url(/images/cocktail-party.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(50deg, blue, magenta);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+header button {
+  display: flex;
+  align-items: center;
+  background-color: #48388f;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+header button:hover {
+  background-color: #e55a50;
+}
+
+header button p {
+  font-size: 1.25rem;
+  margin-left: 0.5rem;
+}
+
+header button img {
+  height: 1.25rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+#item-display {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 10px rgba(255, 160, 249, 0.1);
+  padding: 2rem;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+#item-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#item-name {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+#item-header p {
+  margin: 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+#item-body {
+  display: flex; /* Mantén la flexibilidad para alinear la imagen e información en la misma fila */
+  align-items: flex-start;
+  margin-bottom: 1rem; /* Espacio adicional debajo de esta sección */
+}
+
+#item-image {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#item-info h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+#item-ingredients {
+  list-style-type: disc;
+  margin: 0;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+#item-instructions {
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
+button#add-to-favorites {
+  align-self: center; /* Centra el botón horizontalmente */
+  padding: 0.5rem 1rem;
+  background-color: #c4b7f7;
+  color: #fff;
+  border: 1px solid #f098c5;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#add-to-favorites {
+  background-color: #8e61ff;
+  color: white;
+  border: none;
+  padding: 0.75rem 3.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+#add-to-favorites:hover {
+  background-color: #e55a50;
+}
+
+#favorites-section {
+  width: 35%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+#favorites-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333333;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+#favorites-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#favorites-list li {
+  background-color: #fff;
+  border: 1px solid #f098c5;
+  border-radius: 5px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.3s;
+  width: 90%;
+  max-width: 20rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#favorites-list li:hover {
+  background-color:#c4b7f7;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #item-display {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #item-info, #item-image {
+    width: 100%;
+    text-align: center;
+  }
+}
