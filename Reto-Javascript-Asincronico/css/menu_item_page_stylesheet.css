@@ -1,3 +1,5 @@
+<<<<<<< Updated upstream
+=======
 @font-face {
   font-family: Prata;
   src: url(/fonts/Prata-Regular.ttf);
@@ -5,53 +7,33 @@
 
 :root {
   font-size: 16px;
-  font-family: Prata, serif;
+  height: 100%;
+  width: 100%;
+  font-family: Prata;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  margin: 0;
+  padding: 0%;
+  margin: 0%;
   align-items: center;
+  position: relative;
   background-color: cornsilk;
-  gap:rem;
-  animation: backgroundAnimation 10s infinite alternate;
-}
-
-@keyframes backgroundAnimation {
-  0% {
-    background-color: cornsilk;
-  }
-  50% {
-    background-color: rgb(20, 12, 78);
-  }
-  100% {
-    background-color: rgb(213, 205, 191);
-  }
+  gap: 0.25rem;
 }
 
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 2rem 1rem;
+  justify-content: right;
+  margin: 0;
+  padding: 0 4rem;
+  gap: 40rem;
   background-image: url(/images/cocktail-party.webp);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  animation: slideDown 1s ease-out;
-}
-
-@keyframes slideDown {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  background-position: center 38%;
 }
 
 header h1 {
@@ -59,240 +41,46 @@ header h1 {
   background-clip: text;
   color: transparent;
   background-image: linear-gradient(50deg, blue, magenta);
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
 }
 
 header button {
   display: flex;
+  flex-direction: row;
+  height: 2rem;
   align-items: center;
-  background-color: #48388f;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  padding: 0.5rem 1rem;
-  font-size: 1.25rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-header button:hover {
-  background-color: #e55a50;
 }
 
 header button p {
   font-size: 1.25rem;
-  margin-left: 0.5rem;
 }
 
 header button img {
   height: 1.25rem;
 }
 
-main {
-  display: flex;
+#loader {
   justify-content: center;
-  padding: 2rem;
-  max-width: 1200px;
-  width: 100%;
+  text-align: center;
 }
 
 #item-display {
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  box-shadow: 2px 2px 10px rgba(255, 160, 249, 0.1);
-  padding: 2rem;
-  width: 100%;
-  max-width: 800px;
-  border-radius: 8px;
-  box-sizing: border-box;
-  transition: all 0.3s ease;
-  animation: borderGlow 5s infinite alternate;
-}
-
-@keyframes borderGlow {
-  0% {
-    border-color: #ddd;
-    box-shadow: 2px 2px 10px rgba(255, 160, 249, 0.1);
-  }
-  100% {
-    border-color: #8e61ff;
-    box-shadow: 2px 2px 10px rgba(142, 97, 255, 0.5);
-  }
-}
-
-#item-header {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-#item-name {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: #333;
-  animation: highlight 1.5s ease-in-out infinite alternate;
-}
-
-@keyframes highlight {
-  0% {
-    color: #333;
-  }
-  100% {
-    color: #8e61ff;
-  }
-}
-
-#item-header p {
-  margin: 0;
-  font-size: 1rem;
-  color: #666;
-}
-
-#item-body {
-  display: flex; /* Mantén la flexibilidad para alinear la imagen e información en la misma fila */
-  align-items: flex-start;
-  margin-bottom: 1rem; /* Espacio adicional debajo de esta sección */
-}
-
-#item-image {
-  width: 300px;
-  height: auto;
-  border-radius: 8px;
-  margin-right: 2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-#item-image:hover {
-  transform: scale(1.05);
-}
-
-#item-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-#item-info h3 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  color: #333;
-}
-
-#item-ingredients {
-  list-style-type: disc;
-  margin: 0;
-  padding-left: 1rem;
-  margin-bottom: 1rem;
-}
-
-#item-instructions {
-  text-align: justify;
-  margin-bottom: 1rem;
-}
-
-button#add-to-favorites {
-  align-self: center; /* Centre el botón horizontalmente */
-  padding: 0.5rem 1rem;
-  background-color: #c4b7f7;
-  color: #fff;
-  border: 1px solid #f098c5;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-#add-to-favorites {
-  background-color: #8e61ff;
-  color: white;
-  border: none;
-  padding: 0.75rem 3.5rem;
-  font-size: 1rem;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-top: 1rem;
-  transition: transform 0.2s ease;
-}
-
-#add-to-favorites:hover {
-  transform: translateY(-3px);
-  background-color: #e55a50;
-}
-#favorites-section {
-  position: relative;
-  width: 35%;
-  background-color: #ffffff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-  animation: borderGlow 5s infinite alternate;
-  background-image: url(/path/to/your/image.jpg); 
-  background-size: cover; 
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-
-@media screen and (max-width: 768px) {
-  #favorites-section {
-    width: 100%; 
-    background-size: contain; 
-  }
-}
-
-#favorites-section h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #333333;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 0.5rem;
-  border-radius: 5px;
-  animation: highlight 1.5s ease-in-out infinite alternate;
-
-}
-#favorites-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  border-radius: 0.6rem;
+  background-color: white;
+  border: 2px solid white;
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: center;
+  min-width: 70vw;
+  max-width: 70vw;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
 
-#favorites-list li {
-  background-color: #fff;
-  border: 1px solid #f098c5;
-  border-radius: 5px;
-  padding: 0.75rem 1rem;
-  margin-bottom: 0.5rem;
-  transition: background-color 0.3s, transform 0.3s;
-  width: 90%;
-  max-width: 20rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+#item-name {
+  width: 50vw;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
-
-#favorites-list li:hover {
-  background-color:#c4b7f7;
-  transform: translateX(5px);
-}
-/* Responsive */
-@media screen and (max-width: 768px) {
-  main {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #item-display {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #item-info, #item-image {
-    width: 100%;
-    text-align: center;
-  }
-}
+>>>>>>> Stashed changes
